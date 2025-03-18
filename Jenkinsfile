@@ -5,7 +5,7 @@ pipeline {
         // Stage 1: Checkout the code
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Ajmalk2002/wipro-capstoneproject/tree/main/Capstone_Project_DemoWebShop_Automation'
+                git branch: 'main', url: 'https://github.com/Ajmalk2002/Wipro-Capstone.git'
             }
         }
 
