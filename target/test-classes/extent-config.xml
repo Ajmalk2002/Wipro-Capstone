@@ -1,0 +1,10 @@
+<extentreports>
+    <configuration>
+        <theme>dark</theme>
+        <encoding>UTF-8</encoding>
+        <protocol>https</protocol>
+        <reportName>Cucumber Extent Report</reportName>
+        <documentTitle>Test Automation Report</documentTitle>
+        <reportHeadline>Cucumber Extent Report Example</reportHeadline>
+    </configuration>
+</extentreports>

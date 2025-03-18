@@ -1,0 +1,905 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/11/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Mar 15 20:35:12 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>52 seconds (52265 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful Login with Valid Credentials", "Login and Forgot Password Functionality"</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2603325e4a0d228714de23011adeb147, isElementDisplayed {id=f.6C394A53B9574E8C47F8E736B943091F.d.C6C19DDFACA6E04E4D6DA316A5D3C36D.e.28}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52880}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52880/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2603325e4a0d228714de23011adeb147)] -&gt; id: Password]
+Session ID: 2603325e4a0d228714de23011adeb147
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.pages.LoginPage.enterPassword(LoginPage.java:45)
+	at com.loginsteps.LoginStepDefinitions.i_enter_valid_email_and_password(LoginStepDefinitions.java:23)
+	at ✽.I enter valid email &quot;mouni@tetio.com&quot; and password &quot;moin@1234&quot;(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/login.feature:5)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace137842981", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace137842981'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2603325e4a0d228714de23011adeb147, isElementDisplayed {id=f.6C394A53B9574E8C47F8E736B943091F.d.C6C19DDFACA6E04E4D6DA316A5D3C36D.e.28}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52880}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52880/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2603325e4a0d228714de23011adeb147)] -&gt; id: Password]
+Session ID: 2603325e4a0d228714de23011adeb147
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.pages.LoginPage.enterPassword(LoginPage.java:45)
+	at com.loginsteps.LoginStepDefinitions.i_enter_valid_email_and_password(LoginStepDefinitions.java:23)
+	at ✽.I enter valid email &quot;mouni@tetio.com&quot; and password &quot;moin@1234&quot;(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/login.feature:5)
+</pre></div></td>
+<td>13</td>
+<td>com.runners.LoginTestRunner@3f1d2e23</td></tr>
+<tr>
+<td title='com.runners.RegistrationTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.RegistrationTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Registration with invalid email", "User Registration"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#register\-button&quot;}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [31b20dc8e2a6d73049fa071aeba6bb2d, findElement {using=id, value=register-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52992}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52992/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 31b20dc8e2a6d73049fa071aeba6bb2d
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
+	at com.basepage.BasePage.onClick(BasePage.java:31)
+	at com.pages.RegistrationPage.click(RegistrationPage.java:56)
+	at com.registrationsteps.RegistrationStepDefinitions.i_click_on_the_register_button(RegistrationStepDefinitions.java:45)
+	at ✽.I click on the Register button(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/registration.feature:22)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace696802011", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace696802011'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#register\-button&quot;}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [31b20dc8e2a6d73049fa071aeba6bb2d, findElement {using=id, value=register-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52992}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52992/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 31b20dc8e2a6d73049fa071aeba6bb2d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
+	at com.basepage.BasePage.onClick(BasePage.java:31)
+	at com.pages.RegistrationPage.click(RegistrationPage.java:56)
+	at com.registrationsteps.RegistrationStepDefinitions.i_click_on_the_register_button(RegistrationStepDefinitions.java:45)
+	at ✽.I click on the Register button(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/registration.feature:22)
+</pre></div></td>
+<td>10</td>
+<td>com.runners.RegistrationTestRunner@4bff7da0</td></tr>
+<tr>
+<td title='com.runners.ForgotPasswordTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ForgotPasswordTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successfully reset password with a registered email", "Forgot Password Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Email with instructions has been sent to you.] but found [Email not found.]
+	at com.forgotpasswordsteps.ForgotPasswordStepDefinitions.i_should_see_a_confirmation_message(ForgotPasswordStepDefinitions.java:46)
+	at ✽.I should see a confirmation message &quot;Email with instructions has been sent to you.&quot;(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/forgotpassword.feature:8)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1541583127", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1541583127'><pre>java.lang.AssertionError: expected [Email with instructions has been sent to you.] but found [Email not found.]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.forgotpasswordsteps.ForgotPasswordStepDefinitions.i_should_see_a_confirmation_message(ForgotPasswordStepDefinitions.java:46)
+	at ✽.I should see a confirmation message &quot;Email with instructions has been sent to you.&quot;(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/forgotpassword.feature:8)
+</pre></div></td>
+<td>14</td>
+<td>com.runners.ForgotPasswordTestRunner@536dbea0</td></tr>
+<tr>
+<td title='com.runners.ShoppingCartTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ShoppingCartTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add an item to the shopping cart and proceed to checkout", "Shopping Cart Functionality"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [746e973cddb80d7141e3ec26eae14cd1, findElement {using=css selector, value=input.button-1.search-box-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53194/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 746e973cddb80d7141e3ec26eae14cd1
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at ✽.User searches for &quot;computer&quot;(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/shoppingcart.feature:5)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:430)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2117)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:935)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1221369225", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1221369225'><pre>org.openqa.selenium.WebDriverException: Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [746e973cddb80d7141e3ec26eae14cd1, findElement {using=css selector, value=input.button-1.search-box-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53194/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 746e973cddb80d7141e3ec26eae14cd1
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at ✽.User searches for &quot;computer&quot;(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/shoppingcart.feature:5)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:430)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2117)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:935)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>14</td>
+<td>com.runners.ShoppingCartTestRunner@1f760b47</td></tr>
+<tr>
+<td title='com.runners.ForgotPasswordTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ForgotPasswordTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Attempt to reset password with an empty email field", "Forgot Password Functionality"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [746e973cddb80d7141e3ec26eae14cd1, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53194/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:436)
+	at com.hooks.Hooks.teardown(Hooks.java:49)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@7dd54954[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@4c53a1ae[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001ca0145ee98@51f6861]] rejected from java.util.concurrent.ThreadPoolExecutor@61147e29[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 46]
+	at java.base/java.util.concurrent.CompletableFuture.wrapInExecutionException(CompletableFuture.java:345)
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:440)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2140)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:436)
+	at com.hooks.Hooks.teardown(Hooks.java:49)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:47)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@7dd54954[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@4c53a1ae[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001ca0145ee98@51f6861]] rejected from java.util.concurrent.ThreadPoolExecutor@61147e29[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 46]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2082)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1377)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:124)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:381)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:410)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1812)
+	... 3 more
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1403503282", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1403503282'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [746e973cddb80d7141e3ec26eae14cd1, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53194/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:436)
+	at com.hooks.Hooks.teardown(Hooks.java:49)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@7dd54954[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@4c53a1ae[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001ca0145ee98@51f6861]] rejected from java.util.concurrent.ThreadPoolExecutor@61147e29[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 46]
+	at java.base/java.util.concurrent.CompletableFuture.wrapInExecutionException(CompletableFuture.java:345)
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:440)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2140)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:436)
+	at com.hooks.Hooks.teardown(Hooks.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:47)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@7dd54954[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@4c53a1ae[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001ca0145ee98@51f6861]] rejected from java.util.concurrent.ThreadPoolExecutor@61147e29[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 46]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2082)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1377)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:124)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:381)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:410)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1812)
+	... 3 more
+</pre></div></td>
+<td>18</td>
+<td>com.runners.ForgotPasswordTestRunner@536dbea0</td></tr>
+<tr>
+<td title='com.runners.RegistrationTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.RegistrationTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful registration", "User Registration"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4df5b453f5350efa96d6d10a05dee6dc, findElement {using=xpath, value=//div[@class=&quot;result&quot;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52877}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52877/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4df5b453f5350efa96d6d10a05dee6dc
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at ✽.I should see a success message &quot;Your registration completed&quot;(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/registration.feature:16)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:430)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2117)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:935)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div><a href='#' onClick='toggleBox("stack-trace410846628", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace410846628'><pre>org.openqa.selenium.WebDriverException: Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4df5b453f5350efa96d6d10a05dee6dc, findElement {using=xpath, value=//div[@class=&quot;result&quot;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52877}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52877/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4df5b453f5350efa96d6d10a05dee6dc
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at ✽.I should see a success message &quot;Your registration completed&quot;(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/registration.feature:16)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:430)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2117)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:935)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>13</td>
+<td>com.runners.RegistrationTestRunner@4bff7da0</td></tr>
+<tr>
+<td title='com.runners.ForgotPasswordTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ForgotPasswordTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Attempt to reset password with an unregistered email", "Forgot Password Functionality"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [78fea8078d161b6da756880b5ade1041, findElement {using=link text, value=Forgot password?}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53035}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53035/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78fea8078d161b6da756880b5ade1041
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at ✽.I navigate to the Forgot Password page(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/forgotpassword.feature:12)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:430)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2117)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:935)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div><a href='#' onClick='toggleBox("stack-trace610097652", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace610097652'><pre>org.openqa.selenium.WebDriverException: Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [78fea8078d161b6da756880b5ade1041, findElement {using=link text, value=Forgot password?}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53035}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53035/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78fea8078d161b6da756880b5ade1041
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at ✽.I navigate to the Forgot Password page(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/forgotpassword.feature:12)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:430)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2117)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:935)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>9</td>
+<td>com.runners.ForgotPasswordTestRunner@536dbea0</td></tr>
+<tr>
+<td title='com.runners.OrderPlacementTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.OrderPlacementTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User places an order successfully", "Order Placement on Demo Web Shop"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0801e36de7ca22bb0cc24b1114f1f460, findElement {using=link text, value=Log in}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53245/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0801e36de7ca22bb0cc24b1114f1f460
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at ✽.User clicks on the login link(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/orderplacement.feature:5)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:430)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2117)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:935)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1059455775", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1059455775'><pre>org.openqa.selenium.WebDriverException: Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0801e36de7ca22bb0cc24b1114f1f460, findElement {using=link text, value=Log in}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53245/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0801e36de7ca22bb0cc24b1114f1f460
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at ✽.User clicks on the login link(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/orderplacement.feature:5)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:430)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2117)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:935)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>9</td>
+<td>com.runners.OrderPlacementTestRunner@18ece7f4</td></tr>
+<tr>
+<td title='com.runners.SearchFilterTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.SearchFilterTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Filter results by alphabetical order", "Search and Filter Products"</td>
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Please enter some search keyword}
+  (Session info: chrome=134.0.6998.89): Please enter some search keyword
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ab697c4ee7a7de16ccad98fd91a26e8f, findElements {using=xpath, value=//div[@class=&apos;product-item&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53128}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53128/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab697c4ee7a7de16ccad98fd91a26e8f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:381)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.iterator(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.pages.SearchAndFilterPage.isProductListDisplayed(SearchAndFilterPage.java:43)
+	at com.searchandfiltersteps.SearchFilterStepDefintions.user_should_see_the_related_products(SearchFilterStepDefintions.java:35)
+	at ✽.User should see the related products(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/searchfilter.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace4239149", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace4239149'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Please enter some search keyword}
+  (Session info: chrome=134.0.6998.89): Please enter some search keyword
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ab697c4ee7a7de16ccad98fd91a26e8f, findElements {using=xpath, value=//div[@class=&apos;product-item&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53128}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53128/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab697c4ee7a7de16ccad98fd91a26e8f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:381)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.iterator(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.pages.SearchAndFilterPage.isProductListDisplayed(SearchAndFilterPage.java:43)
+	at com.searchandfiltersteps.SearchFilterStepDefintions.user_should_see_the_related_products(SearchFilterStepDefintions.java:35)
+	at ✽.User should see the related products(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/searchfilter.feature:7)
+</pre></div></td>
+<td>17</td>
+<td>com.runners.SearchFilterTestRunner@47c81abf</td></tr>
+<tr>
+<td title='com.runners.AdvancedSearchTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.AdvancedSearchTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Perform advanced search", "Advanced Search Filter Products"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;product-grid&apos;]&quot;}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ab697c4ee7a7de16ccad98fd91a26e8f, findElement {using=xpath, value=//div[@class=&apos;product-grid&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53128}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53128/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab697c4ee7a7de16ccad98fd91a26e8f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.isDisplayed(Unknown Source)
+	at com.pages.AdvancedSearchPage.isProductGridDisplayed(AdvancedSearchPage.java:83)
+	at com.advancedsearchsteps.AdvancedSearchStepDefintions.user_should_see_the_related_products(AdvancedSearchStepDefintions.java:29)
+	at ✽.User should see the related products(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/advancedsearch.feature:7)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1919850800", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1919850800'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;product-grid&apos;]&quot;}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ab697c4ee7a7de16ccad98fd91a26e8f, findElement {using=xpath, value=//div[@class=&apos;product-grid&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53128}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53128/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab697c4ee7a7de16ccad98fd91a26e8f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.isDisplayed(Unknown Source)
+	at com.pages.AdvancedSearchPage.isProductGridDisplayed(AdvancedSearchPage.java:83)
+	at com.advancedsearchsteps.AdvancedSearchStepDefintions.user_should_see_the_related_products(AdvancedSearchStepDefintions.java:29)
+	at ✽.User should see the related products(file:///C:/Users/91733/OneDrive/Documents/Wipro-Exercise/Capstone_Project/src/test/resources/features/advancedsearch.feature:7)
+</pre></div></td>
+<td>17</td>
+<td>com.runners.AdvancedSearchTestRunner@776a6d9b</td></tr>
+<tr>
+<td title='com.runners.ProductDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ProductDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate 14.1 inch Laptop details", "Validate product details and add to cart"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [746e973cddb80d7141e3ec26eae14cd1, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53194/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:436)
+	at com.hooks.Hooks.teardown(Hooks.java:49)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@9513ee0[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@3a95590[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001ca0145ee98@d6eab95]] rejected from java.util.concurrent.ThreadPoolExecutor@61147e29[Shutting down, pool size = 3, active threads = 2, queued tasks = 0, completed tasks = 44]
+	at java.base/java.util.concurrent.CompletableFuture.wrapInExecutionException(CompletableFuture.java:345)
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:440)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2140)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:436)
+	at com.hooks.Hooks.teardown(Hooks.java:49)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:47)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@9513ee0[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@3a95590[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001ca0145ee98@d6eab95]] rejected from java.util.concurrent.ThreadPoolExecutor@61147e29[Shutting down, pool size = 3, active threads = 2, queued tasks = 0, completed tasks = 44]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2082)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1377)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:124)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:381)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:410)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1812)
+	... 3 more
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace113894774", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace113894774'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [746e973cddb80d7141e3ec26eae14cd1, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53194/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:436)
+	at com.hooks.Hooks.teardown(Hooks.java:49)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@9513ee0[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@3a95590[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001ca0145ee98@d6eab95]] rejected from java.util.concurrent.ThreadPoolExecutor@61147e29[Shutting down, pool size = 3, active threads = 2, queued tasks = 0, completed tasks = 44]
+	at java.base/java.util.concurrent.CompletableFuture.wrapInExecutionException(CompletableFuture.java:345)
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:440)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2140)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:436)
+	at com.hooks.Hooks.teardown(Hooks.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:47)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@9513ee0[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@3a95590[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001ca0145ee98@d6eab95]] rejected from java.util.concurrent.ThreadPoolExecutor@61147e29[Shutting down, pool size = 3, active threads = 2, queued tasks = 0, completed tasks = 44]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2082)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1377)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:124)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:381)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:410)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1812)
+	... 3 more
+</pre></div></td>
+<td>16</td>
+<td>com.runners.ProductDetailsTestRunner@21d03963</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.runners.SearchFilterTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.SearchFilterTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Filter results by price", "Search and Filter Products"</td>
+<td></td>
+<td>23</td>
+<td>com.runners.SearchFilterTestRunner@47c81abf</td></tr>
+<tr>
+<td title='com.runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Failed Login with Invalid Credentials", "Login and Forgot Password Functionality"</td>
+<td></td>
+<td>12</td>
+<td>com.runners.LoginTestRunner@3f1d2e23</td></tr>
+<tr>
+<td title='com.runners.HomePageTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.HomePageTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the homepage loads successfully", "Verify Demo Web Shop Homepage"</td>
+<td></td>
+<td>13</td>
+<td>com.runners.HomePageTestRunner@34129c78</td></tr>
+<tr>
+<td title='com.runners.ProductDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ProductDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add 14.1 inch Laptop to cart", "Validate product details and add to cart"</td>
+<td></td>
+<td>9</td>
+<td>com.runners.ProductDetailsTestRunner@21d03963</td></tr>
+<tr>
+<td title='com.runners.HomePageTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.HomePageTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for a product successfully", "Verify Demo Web Shop Homepage"</td>
+<td></td>
+<td>11</td>
+<td>com.runners.HomePageTestRunner@34129c78</td></tr>
+</table><p>
+</body>
+</html>

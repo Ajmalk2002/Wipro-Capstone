@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://demowebshop.tricentis.com/"/>
+    <classes>
+      <class name="com.runners.OrderPlacementTestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.runners.OrderPlacementTestRunner -->
+      <class name="com.runners.AdvancedSearchTestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.runners.AdvancedSearchTestRunner -->
+      <class name="com.runners.SearchFilterTestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="1"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.runners.SearchFilterTestRunner -->
+      <class name="com.runners.RegistrationTestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.runners.RegistrationTestRunner -->
+      <class name="com.runners.ShoppingCartTestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.runners.ShoppingCartTestRunner -->
+      <class name="com.runners.ProductDetailsTestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.runners.ProductDetailsTestRunner -->
+      <class name="com.runners.ForgotPasswordTestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0 1 2"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.runners.ForgotPasswordTestRunner -->
+      <class name="com.runners.LoginTestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.runners.LoginTestRunner -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
