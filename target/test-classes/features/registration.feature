@@ -9,7 +9,7 @@ Feature: User Account Registration
       | Field          | Value                  |  
       | First Name     | Ajmal                  |  
       | Last Name      | Aju                    |  
-      | Email          | ajmaldemo3@gmail.com  |  
+      | Email          | ajmaldemo00@gmail.com  |  
       | Password       | Password123            |  
       | Confirm Password | Password123          |  
     And I click the "Register" button  
