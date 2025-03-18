@@ -12,19 +12,22 @@ pipeline {
         // Stage 2: Build the project
         stage('Build') {
             steps {
-                bat 'mvn clean install' // Use 'bat' instead of 'sh' for Windows
+                sh 'mvn clean install' // For Maven projects
+                // sh 'gradle build'   // For Gradle projects
             }
         }
 
         // Stage 3: Run tests
         stage('Test') {
             steps {
-                bat 'mvn test' // Use 'bat' instead of 'sh' for Windows
+                sh 'mvn test' // For Maven projects
+                // sh 'gradle test' // For Gradle projects
             }
             post {
                 always {
                     // Publish test results
-                    junit '**/target/surefire-reports/*.xml'
+                    junit '**/target/surefire-reports/*.xml' // For Maven projects
+                    // junit '**/build/test-results/test/*.xml' // For Gradle projects
                 }
             }
         }
@@ -36,7 +39,7 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,
-                    reportDir: 'target/site/surefire-report', // Corrected the path
+                    reportDir: 'target/site/surefire-report.html', // Path to your HTML report
                     reportFiles: 'index.html',
                     reportName: 'Test Report'
                 ]
