@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Cucumber Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>16/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>17/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 18 13:55:13 IST 2025</td>
+<td>Started on:</td><td>Wed Mar 19 00:56:15 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>193 seconds (193936 ms)</td>
+<tr><td>Total time:</td><td>245 seconds (245356 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,75 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.runners.RegistrationTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.RegistrationTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful Account Registration", "User Account Registration"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;result&quot;]&quot;}
-  (Session info: MicrosoftEdge=133.0.3065.82)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [b1d510529f95090c36a380db5e0ee6a4, findElement {using=xpath, value=//div[@class=&quot;result&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:49974}, msedge: {msedgedriverVersion: 133.0.3065.92 (e8591772eda3..., userDataDir: C:\Users\AJMAL\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49974/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b1d510529f95090c36a380db5e0ee6a4
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy27.getText(Unknown Source)
-	at com.pages.RegistrationPage.getSuccessMsg(RegistrationPage.java:70)
-	at com.registrationsteps.RegistrationStepDefinitions.verifySuccessMessage(RegistrationStepDefinitions.java:59)
-	at ✽.I should see a confirmation message &quot;Your registration completed&quot;(file:///E:/Capstone-Project-demowebshop/Capstone_Project_DemoWebShop_Automation/src/test/resources/features/registration.feature:16)
-... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1526730726", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1526730726'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;result&quot;]&quot;}
-  (Session info: MicrosoftEdge=133.0.3065.82)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [b1d510529f95090c36a380db5e0ee6a4, findElement {using=xpath, value=//div[@class=&quot;result&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:49974}, msedge: {msedgedriverVersion: 133.0.3065.92 (e8591772eda3..., userDataDir: C:\Users\AJMAL\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49974/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b1d510529f95090c36a380db5e0ee6a4
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy27.getText(Unknown Source)
-	at com.pages.RegistrationPage.getSuccessMsg(RegistrationPage.java:70)
-	at com.registrationsteps.RegistrationStepDefinitions.verifySuccessMessage(RegistrationStepDefinitions.java:59)
-	at ✽.I should see a confirmation message &quot;Your registration completed&quot;(file:///E:/Capstone-Project-demowebshop/Capstone_Project_DemoWebShop_Automation/src/test/resources/features/registration.feature:16)
-</pre></div></td>
-<td>10</td>
-<td>com.runners.RegistrationTestRunner@4bff7da0</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -144,85 +75,90 @@ Session ID: b1d510529f95090c36a380db5e0ee6a4
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.runners.SearchFilterTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.SearchFilterTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Filter products alphabetically (A to Z)", "Product Search and Filtering"</td>
+<td title='com.runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User fails to log in with invalid credentials", "Login and Forgot Password Functionality"</td>
 <td></td>
-<td>12</td>
-<td>com.runners.SearchFilterTestRunner@47c81abf</td></tr>
+<td>9</td>
+<td>com.runners.LoginTestRunner@34129c78</td></tr>
+<tr>
+<td title='com.runners.HomePageTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.HomePageTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Ensure the homepage loads correctly", "Validate Demo Web Shop Homepage"</td>
+<td></td>
+<td>10</td>
+<td>com.runners.HomePageTestRunner@536dbea0</td></tr>
 <tr>
 <td title='com.runners.ForgotPasswordTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ForgotPasswordTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successfully reset password using a registered email", "Forgot Password Functionality"</td>
 <td></td>
-<td>9</td>
-<td>com.runners.ForgotPasswordTestRunner@3f1d2e23</td></tr>
-<tr>
-<td title='com.runners.AdvancedSearchTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.AdvancedSearchTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Perform advanced search", "Advanced Search Filter Products"</td>
-<td></td>
 <td>11</td>
-<td>com.runners.AdvancedSearchTestRunner@776a6d9b</td></tr>
-<tr>
-<td title='com.runners.ShoppingCartTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ShoppingCartTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a product to the cart and proceed to checkout", "Shopping Cart Functionality"</td>
-<td></td>
-<td>18</td>
-<td>com.runners.ShoppingCartTestRunner@21d03963</td></tr>
-<tr>
-<td title='com.runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User fails to log in with invalid credentials", "Login and Forgot Password Functionality"</td>
-<td></td>
-<td>7</td>
-<td>com.runners.LoginTestRunner@34129c78</td></tr>
-<tr>
-<td title='com.runners.RegistrationTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.RegistrationTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Registration with an Invalid Email", "User Account Registration"</td>
-<td></td>
-<td>6</td>
-<td>com.runners.RegistrationTestRunner@4bff7da0</td></tr>
-<tr>
-<td title='com.runners.ProductDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ProductDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check specifications of the 14.1-inch Laptop", "Verify Product Details and Add to Cart"</td>
-<td></td>
-<td>10</td>
-<td>com.runners.ProductDetailsTestRunner@1f760b47</td></tr>
+<td>com.runners.ForgotPasswordTestRunner@3f1d2e23</td></tr>
 <tr>
 <td title='com.runners.SearchFilterTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.SearchFilterTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Filter products by price (Low to High)", "Product Search and Filtering"</td>
 <td></td>
-<td>10</td>
+<td>11</td>
 <td>com.runners.SearchFilterTestRunner@47c81abf</td></tr>
 <tr>
-<td title='com.runners.OrderPlacementTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.OrderPlacementTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successfully placing an order", "Order Processing on Demo Web Shop"</td>
+<td title='com.runners.AdvancedSearchTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.AdvancedSearchTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Perform advanced search", "Advanced Search Filter Products"</td>
 <td></td>
-<td>30</td>
-<td>com.runners.OrderPlacementTestRunner@18ece7f4</td></tr>
+<td>14</td>
+<td>com.runners.AdvancedSearchTestRunner@776a6d9b</td></tr>
 <tr>
-<td title='com.runners.ForgotPasswordTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ForgotPasswordTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Attempt to reset password using an unregistered email", "Forgot Password Functionality"</td>
+<td title='com.runners.SearchFilterTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.SearchFilterTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Filter products alphabetically (A to Z)", "Product Search and Filtering"</td>
 <td></td>
-<td>7</td>
-<td>com.runners.ForgotPasswordTestRunner@3f1d2e23</td></tr>
+<td>14</td>
+<td>com.runners.SearchFilterTestRunner@47c81abf</td></tr>
 <tr>
-<td title='com.runners.ForgotPasswordTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ForgotPasswordTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Attempt to reset password without entering an email", "Forgot Password Functionality"</td>
+<td title='com.runners.ShoppingCartTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ShoppingCartTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a product to the cart and proceed to checkout", "Shopping Cart Functionality"</td>
 <td></td>
-<td>7</td>
-<td>com.runners.ForgotPasswordTestRunner@3f1d2e23</td></tr>
-<tr>
-<td title='com.runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User logs in successfully with valid credentials", "Login and Forgot Password Functionality"</td>
-<td></td>
-<td>13</td>
-<td>com.runners.LoginTestRunner@34129c78</td></tr>
+<td>21</td>
+<td>com.runners.ShoppingCartTestRunner@21d03963</td></tr>
 <tr>
 <td title='com.runners.RegistrationTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.RegistrationTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Registration with an Already Registered Email", "User Account Registration"</td>
 <td></td>
-<td>7</td>
+<td>11</td>
 <td>com.runners.RegistrationTestRunner@4bff7da0</td></tr>
 <tr>
 <td title='com.runners.ProductDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ProductDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add the 14.1-inch Laptop to the shopping cart", "Verify Product Details and Add to Cart"</td>
 <td></td>
-<td>8</td>
+<td>11</td>
 <td>com.runners.ProductDetailsTestRunner@1f760b47</td></tr>
 <tr>
-<td title='com.runners.HomePageTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.HomePageTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Ensure the homepage loads correctly", "Validate Demo Web Shop Homepage"</td>
+<td title='com.runners.RegistrationTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.RegistrationTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Registration with an Invalid Email", "User Account Registration"</td>
 <td></td>
-<td>7</td>
-<td>com.runners.HomePageTestRunner@536dbea0</td></tr>
+<td>11</td>
+<td>com.runners.RegistrationTestRunner@4bff7da0</td></tr>
+<tr>
+<td title='com.runners.ForgotPasswordTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ForgotPasswordTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Attempt to reset password using an unregistered email", "Forgot Password Functionality"</td>
+<td></td>
+<td>10</td>
+<td>com.runners.ForgotPasswordTestRunner@3f1d2e23</td></tr>
 <tr>
 <td title='com.runners.HomePageTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.HomePageTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Perform a successful product search", "Validate Demo Web Shop Homepage"</td>
 <td></td>
-<td>9</td>
+<td>11</td>
 <td>com.runners.HomePageTestRunner@536dbea0</td></tr>
+<tr>
+<td title='com.runners.OrderPlacementTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.OrderPlacementTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successfully placing an order", "Order Processing on Demo Web Shop"</td>
+<td></td>
+<td>40</td>
+<td>com.runners.OrderPlacementTestRunner@18ece7f4</td></tr>
+<tr>
+<td title='com.runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User logs in successfully with valid credentials", "Login and Forgot Password Functionality"</td>
+<td></td>
+<td>15</td>
+<td>com.runners.LoginTestRunner@34129c78</td></tr>
+<tr>
+<td title='com.runners.ForgotPasswordTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ForgotPasswordTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Attempt to reset password without entering an email", "Forgot Password Functionality"</td>
+<td></td>
+<td>10</td>
+<td>com.runners.ForgotPasswordTestRunner@3f1d2e23</td></tr>
+<tr>
+<td title='com.runners.ProductDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.ProductDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check specifications of the 14.1-inch Laptop", "Verify Product Details and Add to Cart"</td>
+<td></td>
+<td>12</td>
+<td>com.runners.ProductDetailsTestRunner@1f760b47</td></tr>
+<tr>
+<td title='com.runners.RegistrationTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runners.RegistrationTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful Account Registration", "User Account Registration"</td>
+<td></td>
+<td>12</td>
+<td>com.runners.RegistrationTestRunner@4bff7da0</td></tr>
 </table><p>
 </body>
 </html>
