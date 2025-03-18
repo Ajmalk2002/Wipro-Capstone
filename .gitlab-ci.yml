@@ -1,0 +1,36 @@
+stages:
+  - build
+  - test
+  - report
+
+# Stage 1: Build the project
+build:
+  stage: build
+  script:
+    - mvn clean install # For Maven projects
+    # - gradle build    # For Gradle projects
+  artifacts:
+    paths:
+      - target/ # For Maven projects
+      # - build/ # For Gradle projects
+
+# Stage 2: Run tests
+test:
+  stage: test
+  script:
+    - mvn test # For Maven projects
+    # - gradle test # For Gradle projects
+  artifacts:
+    reports:
+      junit: target/surefire-reports/*.xml # For Maven projects
+      # junit: build/test-results/test/*.xml # For Gradle projects
+
+# Stage 3: Publish HTML reports (optional)
+report:
+  stage: report
+  script:
+    - echo "Publishing test reports..."
+  artifacts:
+    paths:
+      - target/site/surefire-report.html # Path to your HTML report
+    expire_in: 1 week
